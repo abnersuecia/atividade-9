@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+
+.gallery {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px;
+    height: auto;
+    padding: 40px;
+    width: 90%;
+    margin: auto;
+}
+
+.gallery-item {
+    overflow: hidden;
+    position: relative;
+    border: 8px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all .3s;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery:hover .gallery-item {
+    opacity: .5;
+}
+
+.gallery .gallery-item:hover {
+    opacity: 1
+}
+
+.gallery-item:hover {
+    transform: translateY(-20px)
+}
+
+
+.gallery-item .imagem {
+    max-width: 300px;
+    height: 300px;
+}
+
+.font2 {
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #f9f9f9;
+    font-size: 80px;
+}
+
+body {
+    background-color: #242323;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #f9f9f9;
+    
+}
+
+.font {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #f9f9f9;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgb(31, 31, 31);
+    padding: 12px 16px;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(-10px);
+    visibility: hidden;
+    transition: opacity 0.4s ease, transform 0.5s ease;
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+
+nav {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative;
+    /* Necessário para o posicionamento do dropdown */
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    /* Torna o link clicável em toda a área */
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+.slider {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    animation: slideAnimation 9s infinite;
+}
+
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+@keyframes slideAnimation {
+    0% {
+        transform: translate(0);
+    }
+
+    33% {
+        transform: translate(-100%);
+    }
+
+    66% {
+        transform: translate(-200%);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+footer {
+    background-color: #333;
+    color: azure;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+footer-section ul {
+    margin-bottom: 10px;
+}
+
+footer-section ul li {
+    color: white;
+    text-decoration: none;
+    transition: color 0.35s;
+}
+
+footer-section ul li a:hover {
+    color: #63A7A7;
+}
+
+social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.36s;
+}
+
+social-links a:hover {
+    color: #A63A7A;
+}
+
+footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    border-top: 10px solid #fa44;
+    font-size: 14px;
+}
+
+footer-bottom p {
+    margin: 0;
+}
+
